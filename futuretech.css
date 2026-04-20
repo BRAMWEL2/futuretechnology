@@ -1,0 +1,463 @@
+/* ============================================================
+   FUTURETECH — PROFESSIONAL FUTURISTIC CSS
+   Author: FutureTech Editorial:bramwel mwombe
+   Purpose: Global Technology & Breakthrough News Platform
+   Theme: Dark Futuristic AI / Cyber Intelligence
+   ============================================================ */
+
+
+/* ============================================================
+   RESET & BASE NORMALIZATION
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling for premium UX */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================================
+   ROOT VARIABLES (DESIGN SYSTEM)
+   ============================================================ */
+
+:root {
+    --bg-primary: #06080f;
+    --bg-secondary: #0b1020;
+    --bg-tertiary: #11172d;
+
+    --accent-primary: #00e5ff;
+    --accent-secondary: #6cf2c2;
+    --accent-glow: rgba(0, 229, 255, 0.35);
+
+    --text-primary: #e6e9f0;
+    --text-secondary: #aab0c4;
+    --text-muted: #6c728a;
+
+    --border-subtle: rgba(255, 255, 255, 0.08);
+
+    --font-main: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-heading: "Segoe UI Variable", "Inter", sans-serif;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.4);
+    --shadow-glow: 0 0 30px var(--accent-glow);
+}
+
+
+/* ============================================================
+   BODY & GLOBAL STYLES
+   ============================================================ */
+
+body {
+    font-family: var(--font-main);
+    background:
+        linear-gradient(to bottom, rgba(6,8,15,0.9), rgba(6,8,15,1)),
+        url("assets/ai-future-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+/* ============================================================
+   SITE WRAPPER
+   ============================================================ */
+
+#site-wrapper {
+    max-width: 1600px;
+    margin: auto;
+    background-color: rgba(6, 6, 15, 0.92);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow-soft);
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+#main-header {
+    border-bottom: 1px solid var(--border-subtle);
+    background:
+        linear-gradient(to right, rgba(11,16,32,0.95), rgba(6,8,15,0.95)),
+        url("assets/circuit-header.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Top header */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.logo h1 span {
+    color: var(--accent-primary);
+}
+
+.logo p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Utility navigation */
+.utility-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.utility-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.utility-nav a:hover {
+    color: var(--accent-primary);
+}
+
+
+/* ============================================================
+   MAIN NAVIGATION
+   ============================================================ */
+
+#main-navigation {
+    padding: 14px 40px;
+    background-color: rgba(6,8,15,0.85);
+}
+
+#main-navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#main-navigation a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+#main-navigation a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background: var(--accent-primary);
+    transition: width 0.3s ease;
+}
+
+#main-navigation a:hover::after {
+    width: 100%;
+}
+
+
+/* ============================================================
+   HERO SECTION
+}
+   ============================================================ */
+
+   .hero-section {
+    position: relative;
+    
+}
+
+/* Dark overlay */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+#hero-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 60px;
+    background:
+        linear-gradient(to right, rgba(6,8,15,0.9), rgba(6,8,15,0.4)),
+        url("assets/ai-hero.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-feature {
+    max-width: 700px;
+}
+
+.hero-feature h2 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+}
+
+.hero-summary {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.hero-read-more {
+    display: inline-block;
+    padding: 14px 34px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: var(--shadow-glow);
+}
+
+.hero-read-more:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+
+#content-area {
+    padding: 60px;
+}
+
+/* Section headers */
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.3rem;
+    font-family: var(--font-heading);
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+
+/* ============================================================
+   NEWS GRID
+   ============================================================ */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background:
+        linear-gradient(to bottom, rgba(17,23,45,0.9), rgba(11,16,32,0.9)),
+        url("assets/ai-card-bg.jpg");
+    background-size: cover;
+    border: 1px solid var(--border-subtle);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow);
+}
+
+.news-card h3 {
+    margin-bottom: 14px;
+}
+
+.news-card p {
+    color: var(--text-secondary);
+    margin-bottom: 18px;
+}
+
+.news-card time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.news-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+
+/* ============================================================
+   ANALYSIS SECTION
+   ============================================================ */
+
+.analysis-section {
+    margin-top: 80px;
+    padding: 50px;
+    background:
+        linear-gradient(to right, rgba(11,16,32,0.95), rgba(6,8,15,0.95)),
+        url("assets/analysis-bg.jpg");
+    background-size: cover;
+    border-radius: var(--radius-lg);
+}
+
+.analysis-article h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.analysis-article p {
+    margin-bottom: 18px;
+    color: var(--text-secondary);
+}
+
+
+/* ============================================================
+   CATEGORY GRID
+   ============================================================ */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.category-card {
+    padding: 26px;
+    border-radius: var(--radius-md);
+    background:
+        linear-gradient(135deg, rgba(0,229,255,0.08), rgba(108,242,194,0.05));
+    border: 1px solid var(--border-subtle);
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+#sidebar {
+    padding: 40px;
+    background-color: var(--bg-secondary);
+    border-left: 1px solid var(--border-subtle);
+}
+
+.sidebar-widget {
+    margin-bottom: 40px;
+}
+
+.sidebar-widget h3 {
+    margin-bottom: 14px;
+}
+
+.sidebar-widget ul {
+    list-style: none;
+}
+
+.sidebar-widget a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.sidebar-widget a:hover {
+    color: var(--accent-primary);
+}
+
+
+/* ============================================================
+   NEWSLETTER
+   ============================================================ */
+
+#newsletter {
+    padding: 80px;
+    text-align: center;
+    background:
+        linear-gradient(to bottom, rgba(6,8,15,0.9), rgba(6,8,15,1)),
+        url("assets/newsletter-bg.jpg");
+    background-size: cover;
+}
+
+#newsletter input {
+    padding: 14px;
+    width: 300px;
+    border-radius: var(--radius-sm);
+    border: none;
+}
+
+#newsletter button {
+    padding: 14px 30px;
+    margin-left: 10px;
+    border-radius: var(--radius-sm);
+    background: var(--accent-primary);
+    border: none;
+    font-weight: bold;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+#main-footer {
+    background-color: var(--bg-primary);
+    padding: 60px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+}
+
+.footer-column h4 {
+    margin-bottom: 16px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+
+/* ============================================================
+   END OF FUTURETECH CSS
+   ============================================================ */
